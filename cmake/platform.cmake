@@ -110,7 +110,7 @@ if(MSVC)
         append(CMAKE_CCXX_FLAGS "/fp:precise")
     endif()
 elseif(UNIX OR MINGW)
-    append(CMAKE_CCXX_FLAGS "-Wall -Werror -Wno-unknown-pragmas")
+    append(CMAKE_CCXX_FLAGS "-Wall -Wno-unknown-pragmas")
     if(DNNL_GRAPH_WITH_SYCL OR CMAKE_BASE_NAME STREQUAL "icx" OR CMAKE_BASE_NAME STREQUAL "icpx")
         # When using Debug build mode CMake adds "-g" option without "-O0"
         # causing the warning. This probably happens because clang/gcc compilers
